@@ -3,8 +3,7 @@ package com.lxh.farmer.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import com.example.login.R;
+import com.lxh.farmer.R;
 
 import android.content.Context;
 import android.util.Log;

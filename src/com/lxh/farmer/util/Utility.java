@@ -20,7 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.Volley;
-import com.lxh.farmer.activity.MenuActivity;
+import com.lxh.farmer.activity.MenuActivity2;
 import com.lxh.farmer.db.FarmerDB;
 import com.lxh.farmer.model.Product;
 

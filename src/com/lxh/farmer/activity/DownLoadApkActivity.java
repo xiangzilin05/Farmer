@@ -8,8 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import com.example.login.R;
-import com.example.login.R.layout;
+import com.lxh.farmer.R;
 
 import android.R.string;
 import android.app.Activity;
