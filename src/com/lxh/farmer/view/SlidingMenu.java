@@ -38,6 +38,11 @@ public class SlidingMenu extends HorizontalScrollView {
 	 * 标签，用来避免onMeasure（）方法中重复设置子控件
 	 */
 	private boolean once = false;
+	
+	/**
+	 * 标签，用来判断当前隐藏界面是否打开
+	 */
+	private boolean isOpen = false;
 
 	/**
 	 * 未使用自定义属性时，调用
@@ -141,12 +146,55 @@ public class SlidingMenu extends HorizontalScrollView {
 			int scrollX = getScrollX();
 			if (scrollX >= mMenuWidth / 2) {
 				this.smoothScrollTo(mMenuWidth, 0);
+				isOpen = false;
 			} else {
 				this.smoothScrollTo(0, 0);
+				isOpen = true;
 			}
 			return true;
 		}
 		return super.onTouchEvent(ev);
 	}
+	
+	/**
+	 * 打开隐藏界面
+	 */
+	public void openMenu() {
+		if (isOpen) {
+			return;
+		}
+		this.smoothScrollTo(0, 0);
+		isOpen = true;
+	}
+	
+	/**
+	 * 关闭隐藏界面
+	 */
+	public void closeMenu() {
+		if (!isOpen) {
+			return;
+		}
+		this.smoothScrollTo(mMenuWidth, 0);
+		isOpen = false;
+	}
+	
+	/**
+	 * 切换隐藏界面
+	 */
+	public void toggle() {
+		if (isOpen) {
+			closeMenu();
+		} else {
+			openMenu();
+		}
+	}
 
 }
+
+
+
+
+
+
+
+
