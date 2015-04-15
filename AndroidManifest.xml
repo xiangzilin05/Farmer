@@ -9,22 +9,22 @@
         android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_PROFILE" />
 
     <application
+        android:name="com.lxh.farmer.util.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Black.NoTitleBar"
-        android:name="com.lxh.farmer.util.MyApplication" >
+        android:theme="@style/MyTheme" >
         <activity
             android:name="com.lxh.farmer.activity.LoginActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
         </activity>
         <activity
             android:name="com.lxh.farmer.activity.DownLoadApkActivity"
@@ -32,6 +32,10 @@
         </activity>
         <activity
             android:name="com.lxh.farmer.activity.MenuActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.lxh.farmer.activity.myorder.MyOrderActivity"
             android:label="@string/app_name" >
         </activity>
     </application>
